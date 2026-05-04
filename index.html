@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Saúde</title>
+    <link rel="shortcut icon" href="img/download.png" type="image/x-icon">
+    <title>Matehos</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+
         * {
             margin: 0;
             padding: 0;
@@ -24,6 +29,7 @@
             background: #82caff;
             padding: 16px 24px;
             box-shadow: 2px 4px 12px black;
+            border-radius: 15px 15px;
         }
 
         header img {
@@ -67,7 +73,7 @@
         }
 
         .card:hover {
-           
+
             box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
         }
 
@@ -79,10 +85,16 @@
             background: #eef5f5;
         }
 
+        h3 {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
         .card h3 {
             margin-top: 12px;
             font-size: 15px;
-            color: #1a3a3a;
+            color: #4aabab;
         }
 
         footer {
@@ -93,9 +105,21 @@
             font-size: 13px;
         }
 
+        a {
+            text-decoration: none;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a:hover {
+            color: #0A1F44;
+        }
+
         footer a {
             color: #5ecfcf;
             text-decoration: none;
+            letter-spacing: 2px;
         }
 
         hr {
@@ -104,7 +128,8 @@
             margin: 20px auto;
             width: 400px;
         }
-        p{
+
+        p {
             margin-top: 10px;
         }
     </style>
@@ -123,37 +148,47 @@
 
     <div class="container" id="grid">
         <div class="card" data-nome="muleta axilar">
-            <img src="img/melueta.jpg" alt="Muleta Axilar">
+            <a href="muleta.html" target="_blank">
+                <img src="img/melueta.jpg" alt="Muleta Axilar">
+            </a>
             <h3>Muleta Axilar</h3>
         </div>
         <div class="card" data-nome="cadeira de rodas">
-            <img src="img/C.jpg" alt="Cadeira de Rodas">
+            <a href="cadeira.html" target="_blank">
+                <img src="img/C.jpg" alt="Cadeira de Rodas">
+            </a>
             <h3>Cadeira de Rodas</h3>
         </div>
         <div class="card" data-nome="andador 4962">
-            <img src="img/a.png" alt="Andador 4962">
+            <a href="andador.html">
+                <img src="img/a.png" alt="Andador 4962">
+            </a>
             <h3>Andador 4962</h3>
         </div> <br> <br>
     </div>
     <hr>
     <div class="container" id="grid">
         <div class="card" data-nome="andador 4962">
-            <img src="img/a.png" alt="Andador 4962">
-            <h3>Andador 4962</h3>
+            <a href="BOTA.HTML">
+                <img src="img/bota.jpg" alt="Andador 4962">
+            </a>
+            <h3>Bota Imobilizadora</h3>
         </div>
         <div class="card" data-nome="andador 4962">
-            <img src="img/a.png" alt="Andador 4962">
-            <h3>Andador 4962</h3>
+            <img src="img/aspen.jpg" alt="Andador 4962">
+            <h3>Aapen Vista</h3>
         </div>
         <div class="card" data-nome="andador 4962">
-            <img src="img/a.png" alt="Andador 4962">
-            <h3>Andador 4962</h3>
+            <img src="img/elevador.jpg" alt="Andador 4962">
+            <h3>Guincho Elevador</h3>
         </div>
     </div>
     <footer>
         <p>© 2025 Loja de Saúde · Todos os direitos reservados</p>
 
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia et similique impedit non minus, quasi deleniti expedita blanditiis nobis illum ipsam cupiditate iusto unde ex velit sed quaerat aut exercitationem?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia et similique impedit non minus, quasi
+            deleniti expedita blanditiis nobis illum ipsam cupiditate iusto unde ex velit sed quaerat aut
+            exercitationem?</p>
         <img src="" alt=""> <img src="" alt=""> <img src="" alt="">
         <p style="margin-top: 6px;"><a href="#">Contato</a> · <a href="#">Sobre nós</a></p>
     </footer>
