@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            background-color: rgb(222, 240, 240);
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px black;
+            display: block;
+            width: 100%;
+        }
+
+        input {
+            display: block;
+            width: 50%;
+            padding: 8px 12px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: rgb(100, 180, 180);
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .Card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #eedddd;
+            padding: 50px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><img src="img/download.png" alt="#" width="175px"></h1>
+    <input type="text" placeholder="Pesquisar...">
+
+    <div class="container">
+        <div class="Card">
+            <img src="img/download.jpg" width="250px" alt="">
+        </div>
+        <div class="Card">
+            <img src="img/C.jpg" width="250px" alt="">
+        </div>
+        <div class="Card">
+            <img src="img/a.png" width="250px" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
