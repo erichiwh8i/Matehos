@@ -1,70 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Loja de Saúde</title>
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
-        h1 {
-            background-color: rgb(222, 240, 240);
-            border-radius: 5px;
-            box-shadow: 10px 10px 10px black;
+        body {
+            font-family: sans-serif;
+            background: #f0f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #82caff;
+            padding: 16px 24px;
+            box-shadow: 2px 4px 12px black;
+        }
+
+        header img {
             display: block;
-            width: 100%;
+            width: 150px;
         }
 
         input {
             display: block;
             width: 50%;
-            padding: 8px 12px;
-            margin: 20px auto;
+            margin: 24px auto;
+            padding: 10px 16px;
             border: 1px solid #ccc;
             border-radius: 20px;
-            font-size: 16px;
+            font-size: 15px;
             outline: none;
         }
 
         input:focus {
-            border-color: rgb(100, 180, 180);
+            border-color: #4aabab;
         }
 
         .container {
             display: flex;
-            gap: 10px;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px 40px;
+            flex: 1;
         }
 
-        .Card {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #eedddd;
-            padding: 50px;
-            border-radius: 15px;
+        .card {
+            background: #fff;
+            border: 1px solid #dde;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 5px 5px 5px 5px rgb(14, 11, 11);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+           
+            box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #eef5f5;
+        }
+
+        .card h3 {
+            margin-top: 12px;
+            font-size: 15px;
+            color: #1a3a3a;
+        }
+
+        footer {
+            background: #0A1F44;
+            color: #a8d0d0;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #5ecfcf;
+            text-decoration: none;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px solid black;
+            margin: 20px auto;
+            width: 400px;
+        }
+        p{
+            margin-top: 10px;
         }
     </style>
 </head>
 
 <body>
-    <h1><img src="img/download.png" alt="#" width="175px"></h1>
-    <input type="text" placeholder="Pesquisar...">
 
-    <div class="container">
-        <div class="Card">
-            <img src="img/download.jpg" width="250px" alt="">
+    <header>
+        <img src="img/download.png" alt="Logo">
+        <a href="#">Contato</a>
+        <a href="#">Sobre Nós</a>
+        <a href="#">Nossos Parceiros</a>
+    </header>
+
+    <input type="text" placeholder="Pesquisar..." oninput="filtrar(this.value)">
+
+    <div class="container" id="grid">
+        <div class="card" data-nome="muleta axilar">
+            <img src="img/melueta.jpg" alt="Muleta Axilar">
+            <h3>Muleta Axilar</h3>
         </div>
-        <div class="Card">
-            <img src="img/C.jpg" width="250px" alt="">
+        <div class="card" data-nome="cadeira de rodas">
+            <img src="img/C.jpg" alt="Cadeira de Rodas">
+            <h3>Cadeira de Rodas</h3>
         </div>
-        <div class="Card">
-            <img src="img/a.png" width="250px" alt="">
+        <div class="card" data-nome="andador 4962">
+            <img src="img/a.png" alt="Andador 4962">
+            <h3>Andador 4962</h3>
+        </div> <br> <br>
+    </div>
+    <hr>
+    <div class="container" id="grid">
+        <div class="card" data-nome="andador 4962">
+            <img src="img/a.png" alt="Andador 4962">
+            <h3>Andador 4962</h3>
+        </div>
+        <div class="card" data-nome="andador 4962">
+            <img src="img/a.png" alt="Andador 4962">
+            <h3>Andador 4962</h3>
+        </div>
+        <div class="card" data-nome="andador 4962">
+            <img src="img/a.png" alt="Andador 4962">
+            <h3>Andador 4962</h3>
         </div>
     </div>
+    <footer>
+        <p>© 2025 Loja de Saúde · Todos os direitos reservados</p>
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia et similique impedit non minus, quasi deleniti expedita blanditiis nobis illum ipsam cupiditate iusto unde ex velit sed quaerat aut exercitationem?</p>
+        <img src="" alt=""> <img src="" alt=""> <img src="" alt="">
+        <p style="margin-top: 6px;"><a href="#">Contato</a> · <a href="#">Sobre nós</a></p>
+    </footer>
 </body>
 
 </html>
