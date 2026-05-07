@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/download.png" type="image/x-icon">
+    <title>Matehos</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: #f0f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #82caff;
+            padding: 16px 24px;
+            box-shadow: 2px 4px 12px black;
+            border-radius: 15px 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header img {
+            display: block;
+            width: 150px;
+        }
+
+        input {
+            display: block;
+            width: 50%;
+            margin: 24px auto;
+            padding: 10px 166px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #4aabab;
+        }
+
+        .container {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0 20px 40px;
+            flex: 1;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #dde;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 5px 5px 5px 5px rgb(14, 11, 11);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #eef5f5;
+        }
+
+        h3 {
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .card h3 {
+            margin-top: 12px;
+            font-size: 15px;
+            color: #4aabab;
+        }
+
+        footer {
+            background: #0A1F44;
+            color: #a8d0d0;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        a:hover {
+            color: #0A1F44;
+        }
+
+        footer a {
+            color: #5ecfcf;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px solid black;
+            margin: 20px auto;
+            width: 400px;
+        }
+
+        p {
+            margin-top: 10px;
+            text-align: center;
+            padding-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .cliente,
+        .cara,
+        .mano {
+            background-color: #5ecfcf;
+            border: solid 3px black;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .Parceiros {
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .Parceiros img {
+            border: solid 3px #0A1F44;
+            border-radius: 150px;
+            display: block;
+            margin-top: 20px;
+            /* Sombreado consistente e suave para todas as imagens parceiras */
+            box-shadow: 15px 15px 25px 15px rgba(0, 0, 0, 0.5), 0 8px 12px -6px rgba(0, 0, 0, 0.3);
+            margin-bottom: 12px;
+            background-color: #4aabab;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        /* Efeito sutil ao passar o mouse */
+        .Parceiros img:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 30px -12px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Botão padrão */
+        button {
+            background-color: #0A1F44;
+            border: solid 2px #82caff;
+            border-radius: 8px;
+            width: 120px;
+            height: 30px;
+            color: #fff;
+            font-family: "Archivo Black", sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s, color 0.2s, transform 0.1s;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #4aabab;
+            border-color: #4aabab;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        /* Botão WhatsApp específico - mantendo estilo original mas corrigido */
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #25D366;
+            border: none;
+            width: auto;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-family: "Archivo Black", sans-serif;
+            color: white;
+            text-decoration: none;
+            box-shadow: 5px 5px 5px 5px black;
+            margin-top: 5px;
+            margin-bottom: 20px;    
+        }
+
+        .whatsapp-btn:hover {
+            color: white;
+        }
+
+        .whatsapp-btn img {
+            width: 24px;
+            height: 24px;
+            border: none;
+            border-radius: 0;
+            margin: 0;
+            background: none;
+            display: inline-block;
+        }
+
+        .l-btn img {
+            width: 24px;
+            height: 24px;
+            border: none;
+            border-radius: 0;
+            margin: 0;
+            background: none;
+            display: inline-block;
+        }
+
+        .l-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #5ecfcf;
+            border: none;
+            width: auto;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-family: "Archivo Black", sans-serif;
+            color: white;
+            text-decoration: none;
+            margin-top: 5px;
+            box-shadow: 5px 5px 5px 5px black;
+            margin-bottom: 20px;
+            transition: 0.2s;
+        }
+
+        .l-btn:hover {
+            color: white;
+        }
+
+        .insta-btn img {
+            width: 24px;
+            height: 24px;
+            border: none;
+            border-radius: 0;
+            margin: 0;
+            background: none;
+            display: inline-block;
+        }
+
+        .insta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #d80feb;
+            border: none;
+            width: auto;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-family: "Archivo Black", sans-serif;
+            color: white;
+            text-decoration: none;
+            margin-top: 5px;
+            box-shadow: 5px 5px 5px 5px black;
+            margin-bottom: 20px;
+            transition: 0.2s;
+        }
+
+        .insta-btn:hover {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/download.png" alt="Logo">
+        <a href="index.html" target="_blank">Página Principal</a>
+        <a href="contato.html" target="_blank">Contato</a>
+        <a href="#" target="_blank">Sobre Nós</a>
+
+    </header>
+
+    <div class="Parceiros">
+        <img src="img/foto.jpg" alt="#" width="250px">
+        <h3>Percorre</h3>
+        <button>Saiba mais o Percorre</button>
+        <p>Oferecemos cursos 100% gratuitos para jovens de 15 a 29 anos e apoiamos empresas a contratarem nossos alunos
+            formados.</p>
+
+        <a href="https://www.facebook.com/IOS.Oficial" target="_blank" class="whatsapp-btn">
+            <img src="img/w.png" alt="WhatsApp">
+            Fale conosco
+        </a>
+        <a href="https://www.linkedin.com/company/institutopercorre/posts/?feedView=all" target="_blank" class="l-btn">
+            <img src="img/l.png" alt="Linkerdin">
+            Fale conosco
+        </a>
+        <a href="https://www.instagram.com/iosoficial/" target="_blank" class="insta-btn">
+            <img src="img/i.png" alt="insta">
+            Fale conosco
+        </a>
+        <hr>
+    </div>
+
+    <div class="Parceiros">
+        <!-- Removido o inline style de box-shadow para aplicar o sombreamento padrão do CSS -->
+        <img src="img/totvs.png" alt="#" width="250px">
+        <h3>TOTVS</h3>
+        <button>Saiba mais da TOTVS</button>
+        <p>Conheça a TOTVS, a maior empresa de tecnologia do Brasil e tudo o que podemos oferecer para sua empresa
+            crescer e se tornar referência em seu segmento.</p>
+        <a href="https://logostechnology.com.br/consultoriaerp/?gad_source=1&gad_campaignid=20023788456&gbraid=0AAAAADtxWWfo5xgo0TpuvkzioFm91HNit&gclid=Cj0KCQjw8PDPBhCeARIsAOJwmWUVa_o6mn2wZGOpqXym0PfGewgxctu4uU_fk7XvGStVRF4gUPkEgqwaAlyzEALw_wcB"
+            target="_blank" class="whatsapp-btn">
+            <img src="img/w.png" alt="WhatsApp">
+            Fale conosco
+        </a>
+        <a href="https://www.linkedin.com/company/totvs/" target="_blank" class="l-btn">
+            <img src="img/l.png" alt="Linkerdin">
+            Fale conosco
+        </a>
+        <a href="https://www.instagram.com/totvs/" target="_blank" class="insta-btn">
+            <img src="img/i.png" alt="insta">
+            Fale conosco
+        </a> <br>
+        <hr>
+    </div>
+
+    <div class="Parceiros">
+        <img src="img/dell.png" alt="#" width="250px">
+        <h3>Dell</h3>
+        <button>Saiba mais da Dell</button>
+        <p>A Dell Technologies é fundamental para mudar o ambiente digital, impulsionada pelo desejo de contribuir para
+            o progresso humano por meio de tecnologias.</p>
+        <a href="https://www.dell.com/pt-br/lp/whatsapp" target="_blank" class="whatsapp-btn">
+            <img src="img/w.png" alt="WhatsApp">
+            Fale conosco
+        </a>
+        <a href="https://www.linkedin.com/company/delltechnologies/?originalSubdomain=br" target="_blank" class="l-btn">
+            <img src="img/l.png" alt="Linkerdin">
+            Fale conosco
+        </a>
+        <a href="https://www.instagram.com/dellnobrasil/?hl=pt-br" target="_blank" class="insta-btn">
+            <img src="img/i.png" alt="insta">
+            Fale conosco
+        </a>
+    </div>
+
+    <footer>
+        <p>© 2019 Loja de Saúde · Todos os direitos reservados</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia et similique impedit non minus, quasi
+            deleniti expedita blanditiis nobis illum ipsam cupiditate iusto unde ex velit sed quaerat aut
+            exercitátionem?</p>
+        <img class="cliente" src="img/i.png" alt="" width="100px">
+        <img class="cara" src="img/l.png" alt="" width="100px">
+        <img class="mano" src="img/w.png" alt="" width="100px">
+        <p style="margin-top: 6px;"><a href="#">Contato</a> · <a href="#">Sobre nós</a></p>
+    </footer>
+
+</body>
+
+</html>

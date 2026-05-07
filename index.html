@@ -10,7 +10,6 @@
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-
         * {
             margin: 0;
             padding: 0;
@@ -30,6 +29,9 @@
             padding: 16px 24px;
             box-shadow: 2px 4px 12px black;
             border-radius: 15px 15px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         header img {
@@ -73,7 +75,6 @@
         }
 
         .card:hover {
-
             box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.1);
         }
 
@@ -132,6 +133,41 @@
         p {
             margin-top: 10px;
         }
+
+        .cliente,
+        .cara,
+        .mano {
+            background-color: #5ecfcf;
+            border: solid 3px black;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #0A1F44;
+            border: solid 2px #82caff;
+            border-radius: 8px;
+            width: 90px;
+            height: 30px;
+            color: #fff;
+            font-family: "Archivo Black", sans-serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s, color 0.2s, transform 0.1s;
+        }
+
+        button:hover {
+            background-color: #4aabab;
+            border-color: #4aabab;
+            color: #fff;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
     </style>
 </head>
 
@@ -141,7 +177,7 @@
         <img src="img/download.png" alt="Logo">
         <a href="#">Contato</a>
         <a href="#">Sobre Nós</a>
-        <a href="#">Nossos Parceiros</a>
+        <a href="Parceiros.html">Nossos Parceiros</a>
     </header>
 
     <input type="text" placeholder="Pesquisar..." oninput="filtrar(this.value)">
@@ -150,52 +186,64 @@
         <div class="card" data-nome="muleta axilar">
             <a href="muleta.html" target="_blank">
                 <img src="img/melueta.jpg" alt="Muleta Axilar">
+                <button>veja mais</button>
             </a>
             <h3>Muleta Axilar</h3>
         </div>
         <div class="card" data-nome="cadeira de rodas">
+            <img src="img/C.jpg" alt="Cadeira de Rodas">
             <a href="cadeira.html" target="_blank">
-                <img src="img/C.jpg" alt="Cadeira de Rodas">
+                <button>veja mais</button>
             </a>
             <h3>Cadeira de Rodas</h3>
         </div>
         <div class="card" data-nome="andador 4962">
-            <a href="andador.html">
-                <img src="img/a.png" alt="Andador 4962">
+            <img src="img/a.png" alt="Andador 4962">
+            <a href="andador.html" target="_blank">
+                <button>veja mais</button>
             </a>
             <h3>Andador 4962</h3>
-        </div> <br> <br>
+        </div>
     </div>
+
     <hr>
-    <div class="container" id="grid">
-        <div class="card" data-nome="andador 4962">
-            <a href="BOTA.HTML">
-                <img src="img/bota.jpg" alt="Andador 4962">
+
+    <div class="container">
+        <div class="card" data-nome="bota imobilizadora">
+            <img src="img/bota.jpg" alt="Bota Imobilizadora">
+            <a href="BOTA.HTML" target="_blank">
+                <button>veja mais</button>
             </a>
             <h3>Bota Imobilizadora</h3>
         </div>
-        <div class="card" data-nome="andador 4962">
-            <a href="aspen.html">
-                <img src="img/aspen.jpg" alt="Andador 4962">
+        <div class="card" data-nome="aspen vista">
+
+            <img src="img/aspen.jpg" alt="Aspen Vista">
+            <a href="aspen.html" target="_blank">
+                <button>veja mais</button>
             </a>
-            <h3>Aapen Vista</h3>
+            <h3>Aspen Vista</h3>
         </div>
-        <div class="card" data-nome="andador 4962">
-            <a href="elevador.html">
-                <img src="img/elevador.jpg" alt="Andador 4962">
+        <div class="card" data-nome="guincho elevador">
+
+            <img src="img/elevador.jpg" alt="Guincho Elevador"><a href="elevador.html" target="_blank">
+                <button>veja mais</button>
             </a>
             <h3>Guincho Elevador</h3>
         </div>
     </div>
-    <footer>
-        <p>© 2025 Loja de Saúde · Todos os direitos reservados</p>
 
+    <footer>
+        <p>© 2019 Loja de Saúde · Todos os direitos reservados</p>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia et similique impedit non minus, quasi
             deleniti expedita blanditiis nobis illum ipsam cupiditate iusto unde ex velit sed quaerat aut
             exercitationem?</p>
-        <img src="" alt=""> <img src="" alt=""> <img src="" alt="">
+        <img class="cliente" src="img/i.png" alt="" width="100px">
+        <img class="cara" src="img/l.png" alt="" width="100px">
+        <img class="mano" src="img/w.png" alt="" width="100px">
         <p style="margin-top: 6px;"><a href="#">Contato</a> · <a href="#">Sobre nós</a></p>
     </footer>
+
 </body>
 
 </html>
